@@ -37,8 +37,15 @@ dependencies:
 
   # neuomorphism
   flutter_neumorphic: ^3.2.0
+
+  # provider
   provider: ^6.1.5
+
+  # fl chart
   fl_chart: ^1.0.0
+
+  # theme
+  flex_color_scheme: 
 
 dev_dependencies:
   flutter_test:

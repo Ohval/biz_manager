@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class DashBoardContent extends StatelessWidget {
@@ -113,7 +114,47 @@ class DashBoardContent extends StatelessWidget {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
-                  _buildMetricCard('Ventes du jour', '\$1,250', Colors.green),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: LineChart(
+                      LineChartData(
+                        titlesData: FlTitlesData(
+                          rightTitles: AxisTitles(drawBelowEverything: false),
+                          topTitles: AxisTitles(
+                            sideTitles: SideTitles(showTitles: false),
+                          ),
+                          leftTitles: AxisTitles(
+                            drawBelowEverything: !false,
+                            axisNameWidget: SizedBox(width: 4), //
+                          ),
+                        ),
+                        gridData: FlGridData(show: !true),
+                        borderData: FlBorderData(show: !true),
+                        lineBarsData: [
+                          LineChartBarData(
+                            // gradient: LinearGradient(
+                            //   begin: Alignment.topRight,
+                            //   end: Alignment.bottomLeft,
+                            //   colors: [
+                            //     const Color.fromARGB(255, 0, 222, 37),
+                            //     const Color.fromARGB(255, 155, 83, 83),
+                            //   ],
+                            // ),
+                            barWidth: 4,
+                            isCurved: true,
+                            curveSmoothness: 0.30,
+                            spots: [
+                              FlSpot(0, 0),
+                              FlSpot(1, 3),
+                              FlSpot(2, 5),
+                              FlSpot(3, 1),
+                              FlSpot(4, 6),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                   _buildMetricCard('Articles en stock', '540', Colors.indigo),
                   _buildMetricCard('Alertes faible stock', '5', Colors.red),
                 ],
