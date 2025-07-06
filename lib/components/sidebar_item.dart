@@ -31,18 +31,18 @@ class SidebarItem extends StatelessWidget {
               ? const Color(0xFF4C51BF)
               : Colors.transparent, // Bleu profond pour l'actif
           borderRadius: BorderRadius.circular(8.0),
-          boxShadow: isActive
-              ? [
-                  BoxShadow(
-                    color: const Color(0xFF4C51BF).withOpacity(0.3),
-                    blurRadius: 8,
-                    offset: const Offset(0, 4),
-                  ),
-                ]
-              : null,
+          // boxShadow: isActive
+          //     ? [
+          //         BoxShadow(
+          //           color: const Color(0xFF4C51BF).withOpacity(0.3),
+          //           blurRadius: 8,
+          //           offset: const Offset(0, 4),
+          //         ),
+          //       ]
+          //     : null,
         ),
         transform: isActive
-            ? Matrix4.translationValues(3, 0, 0)
+            ? Matrix4.translationValues(4 * 2, 0, 0)
             : Matrix4.identity(),
         child: Row(
           children: [
