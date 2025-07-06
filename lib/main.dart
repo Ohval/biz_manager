@@ -6,7 +6,7 @@ import 'package:biz_manager_app/widgets/header.dart';
 import 'package:biz_manager_app/contents/report_content.dart';
 import 'package:biz_manager_app/contents/sales_content.dart';
 import 'package:biz_manager_app/contents/settings_content.dart';
-import 'package:biz_manager_app/provider/state_provider.dart';
+import 'provider/state_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
